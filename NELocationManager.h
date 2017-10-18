@@ -39,7 +39,9 @@ typedef void(^LocationUpdateBlock)(BOOL success, NELocationInfo *locationInfo, N
 @property (nonatomic ,copy) void(^toSettingBlock)(void);    //授权时点击授权按钮动作
 @property (nonatomic ,copy) void(^cancelSettingBlock)(void);//授权时点击取消按钮动作
 
-//alertController显示的信息
+/*
+ * alertController显示的信息
+ */
 @property (nonatomic ,copy) NSString *alertTitleText;
 @property (nonatomic ,copy) NSString *alertMessageText;
 @property (nonatomic ,copy) NSString *settingText;

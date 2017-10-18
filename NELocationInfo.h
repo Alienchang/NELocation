@@ -5,6 +5,10 @@
 //  Copyright © 2017 Chang Liu. All rights reserved.
 //
 
+/*
+ *  当前地点信息所有信息
+ */
+
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
