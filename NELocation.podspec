@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.requires_arc          = true
   s.ios.deployment_target = '9.0'
   s.source_files = 'Classes/**/*.{h,m,mm}'
-  s.public_header_files = 'Classes/**/*.h
+  s.public_header_files = 'Classes/**/*.h'
   s.frameworks = 'CoreLocation'
   s.dependency 'MSWeakTimer'
 end
