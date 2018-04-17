@@ -11,9 +11,14 @@
 typedef void(^LocationUpdateBlock)(BOOL success, NELocationInfo *locationInfo, NSError *error);
 
 @interface NELocationManager : NSObject
-
-@property (nonatomic ,assign) double distanceFilter;        //最小更新距离
-@property (nonatomic ,assign) double desiredAccuracy;       //期望精度
+///最小更新距离
+@property (nonatomic ,assign) double distanceFilter;
+///期望精度
+@property (nonatomic ,assign) double desiredAccuracy;
+///每隔多长时间更新一次地址，并由当前对象保存，0为停止更新
+@property (nonatomic ,assign) NSTimeInterval updateLocationInterval;
+/// 如果调用了startLocate，回调后会立即更新此值。如果updateLocationInterval不为0，每次更新后都会更新此值
+@property (nonatomic ,strong) NELocationInfo *locationInfo;
 /*
  * 单例
  */
@@ -34,6 +39,17 @@ typedef void(^LocationUpdateBlock)(BOOL success, NELocationInfo *locationInfo, N
  * 停止定位
  */
 - (void)endLocate;
+
+/**
+ 根据经纬度获取地理位置信息
+ 
+ @param longitude 经度
+ @param latitude 纬度
+ @param locationUpdateBlock 地理位置信息回调
+ */
+- (void)fetchLocationInfoWithLongitude:(CGFloat)longitude
+                              latitude:(CGFloat)latitude
+                   locationUpdateBlock:(LocationUpdateBlock)locationUpdateBlock;
 
 //************************************************** 授权 **********************************
 @property (nonatomic ,copy) void(^toSettingBlock)(void);    //授权时点击授权按钮动作

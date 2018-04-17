@@ -7,12 +7,19 @@
 
 #import "NELocationManager.h"
 #import <UIKit/UIKit.h>
+#import "MSWeakTimer.h"
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)    ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
-@interface NELocationManager()<CLLocationManagerDelegate>
+@interface NELocationManager()<CLLocationManagerDelegate>{
+    CLLocation          *_currentLocation;
+}
 @property (nonatomic ,strong) CLLocationManager   *locationManager;
 @property (nonatomic ,copy)   LocationUpdateBlock locationCompletionBlock;
+@property (nonatomic ,strong) MSWeakTimer         *timer;
+@property (nonatomic ,strong) dispatch_queue_t    locationUpdateQueue;
+
+
 @end
 
 @implementation NELocationManager
@@ -21,7 +28,8 @@
     static NELocationManager *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedMyManager = [self new];
+        sharedMyManager = [NELocationManager new];
+        [sharedMyManager setDistanceFilter:0];
     });
     return sharedMyManager;
 }
@@ -37,6 +45,28 @@
         [_locationManager setDelegate:self];
     }
     return self;
+}
+
+- (void)setUpdateLocationInterval:(NSTimeInterval)updateLocationInterval {
+    _updateLocationInterval = updateLocationInterval;
+    if (updateLocationInterval > 0) {
+//        self.locationUpdateQueue = dispatch_queue_create("com.sc.gcd.updateLocationDispatchQueue", NULL);
+        self.locationUpdateQueue = dispatch_get_main_queue();
+        self.timer = [MSWeakTimer scheduledTimerWithTimeInterval:updateLocationInterval target:self selector:@selector(updateLocatin) userInfo:nil repeats:YES dispatchQueue:self.locationUpdateQueue];
+        [self.timer fire];
+    }else{
+        [self.timer invalidate];
+        [self setLocationUpdateQueue:nil];
+        [self setTimer:nil];
+    }
+}
+
+- (void)updateLocatin {
+    __weak typeof(self) weakSelf = self;
+    [self startLocate:^(BOOL success, NELocationInfo *locationInfo, NSError *error) {
+        [weakSelf setLocationInfo:locationInfo];
+       // NSLog(@"NELocationManager = %@",locationInfo.description);
+    }];
 }
 
 + (BOOL)locationPermission{
@@ -59,7 +89,11 @@
 
 - (void)setDistanceFilter:(double)distanceFilter {
     _distanceFilter = distanceFilter;
-    [self.locationManager setDistanceFilter:distanceFilter];
+    if (_distanceFilter == 0) {
+        [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
+    } else {
+        [self.locationManager setDistanceFilter:distanceFilter];
+    }
 }
 
 - (void)setDesiredAccuracy:(double)desiredAccuracy {
@@ -181,6 +215,8 @@
 - (void)startLocate:(LocationUpdateBlock)locationUpdateBlock {
     [self setLocationCompletionBlock:locationUpdateBlock];
     if ([NELocationManager locationPermission]) {
+        //iOS 11以后需要在获取地理位置前调用这个方法
+        [self.locationManager requestAlwaysAuthorization];
         [self.locationManager startUpdatingLocation];
     }else{
         [self getPermissionForStartUpdatingLocation];
@@ -188,20 +224,33 @@
 }
 
 #pragma mark --CLLocationManagerDelegate
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-    if (locations && [locations count] >= 1) {
-        CLLocation *location = [locations lastObject];
-        [self getLocationInfoAdLocation:location];
-        [self.locationManager stopUpdatingLocation];
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    
+    CLLocation *newLocation = locations.lastObject;
+    
+    NSTimeInterval locationAge = -[newLocation.timestamp timeIntervalSinceNow];
+    if (locationAge > 5.0) return;
+    
+    if (newLocation.horizontalAccuracy < 0) return;
+    
+    CLLocation *loc1 = [[CLLocation alloc] initWithLatitude:_currentLocation.coordinate.latitude longitude:_currentLocation.coordinate.longitude];
+    CLLocation *loc2 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
+    double distance = [loc1 distanceFromLocation:loc2];
+    _currentLocation = newLocation;
+    
+    if(distance > 20) {
+        if (locations && [locations count] >= 1) {
+            CLLocation *location = [locations lastObject];
+            [self getLocationInfoAdLocation:location];
+            [self.locationManager stopUpdatingLocation];
+        }
     }
 }
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     if (self.locationCompletionBlock) {
-        self.locationCompletionBlock(NO ,nil ,nil);
+        self.locationCompletionBlock(NO ,self.locationInfo ,nil);
     }
 }
-
 #pragma mark -- accessor
 - (NSString *)alertTitleText{
     if (!_alertTitleText) {
@@ -254,32 +303,60 @@
 - (void)getLocationInfoAdLocation:(CLLocation *)location {
     CLGeocoder *geocoder = [CLGeocoder new];
     __weak typeof(self) weakSelf = self;
-    __block NELocationInfo *locationInfo = [NELocationInfo new];
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray* placemarks, NSError* error){
+        NELocationInfo *locationInfo = nil;
         if ([placemarks count] > 0) {
-            CLPlacemark *mark = (CLPlacemark*)[placemarks objectAtIndex:0];
-            NSString *name = mark.name ? mark.name : @"";
-            NSString *thoroughfare = mark.thoroughfare ? mark.thoroughfare : @"";
-            NSString *locality = mark.locality ? mark.locality : @"";
-            NSString *subAdministrativeArea = mark.subAdministrativeArea ? mark.subAdministrativeArea : @"";
-            NSString *postalcode = mark.postalCode ? mark.postalCode : @"";
-            NSString *country = mark.country ? mark.country : @"";
-            NSString *ISOcountryCode = mark.ISOcountryCode ? mark.ISOcountryCode : @"$";
-            
-            locationInfo.name        = name;
-            locationInfo.latitude    = [NSString stringWithFormat:@"%f",location.coordinate.latitude];
-            locationInfo.longitude   = [NSString stringWithFormat:@"%f",location.coordinate.longitude];
-            locationInfo.altitude    = [NSString stringWithFormat:@"%f",location.altitude];
-            locationInfo.city        = locality;
-            locationInfo.street      = thoroughfare;
-            locationInfo.county      = subAdministrativeArea;
-            locationInfo.country     = country;
-            locationInfo.zipCode     = postalcode;
-            locationInfo.countryCode = ISOcountryCode;
+            CLPlacemark *placemark = (CLPlacemark*)[placemarks objectAtIndex:0];
+            locationInfo = [self generateLocationInfoWithPlacemark:placemark location:location];
         }
         if (weakSelf.locationCompletionBlock) {
-            weakSelf.locationCompletionBlock(YES ,locationInfo ,nil);
+            weakSelf.locationCompletionBlock(!error ,locationInfo ,error);
         }
     }];
+}
+
+- (void)fetchLocationInfoWithLongitude:(CGFloat)longitude
+                              latitude:(CGFloat)latitude
+                   locationUpdateBlock:(LocationUpdateBlock)locationUpdateBlock {
+    CLGeocoder *geoCoder = [CLGeocoder new];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+    [geoCoder reverseGeocodeLocation:location completionHandler: ^(NSArray *placemarks,NSError *error) {
+        NELocationInfo *locationInfo = nil;
+        if ([placemarks count] > 0) {
+            CLPlacemark *placemark = (CLPlacemark*)[placemarks objectAtIndex:0];
+            CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+            locationInfo = [self generateLocationInfoWithPlacemark:placemark location:location];
+        }
+        if (locationUpdateBlock) {
+            locationUpdateBlock(!error ,locationInfo ,error);
+        }
+    }];
+}
+
+- (NELocationInfo *)generateLocationInfoWithPlacemark:(CLPlacemark *)placemark location:(CLLocation *)location{
+    NELocationInfo *locationInfo = [NELocationInfo new];
+    NSString *name = placemark.name ? placemark.name : @"";
+    NSString *thoroughfare = placemark.thoroughfare ? placemark.thoroughfare : @"";
+    NSString *locality = placemark.locality ? placemark.locality : @"";
+    NSString *subAdministrativeArea = placemark.subAdministrativeArea ? placemark.subAdministrativeArea : @"";
+    NSString *postalcode = placemark.postalCode ? placemark.postalCode : @"";
+    NSString *country = placemark.country ? placemark.country : @"";
+    NSString *ISOcountryCode = placemark.ISOcountryCode ? placemark.ISOcountryCode : @"$";
+    
+    locationInfo.name        = name;
+    locationInfo.latitude    = [NSString stringWithFormat:@"%f",location.coordinate.latitude];
+    locationInfo.longitude   = [NSString stringWithFormat:@"%f",location.coordinate.longitude];
+    locationInfo.altitude    = [NSString stringWithFormat:@"%f",location.altitude];
+    locationInfo.city        = locality;
+    locationInfo.street      = thoroughfare;
+    locationInfo.county      = subAdministrativeArea;
+    locationInfo.country     = country;
+    locationInfo.zipCode     = postalcode;
+    locationInfo.countryCode = ISOcountryCode;
+    return locationInfo;
+}
+
+- (void)dealloc {
+    [self.timer invalidate];
 }
 @end
