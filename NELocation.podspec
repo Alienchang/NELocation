@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Alienchang/NELocation.git'
   s.license          = 'MIT'
   s.author           = { 'liuchang' => '1217493217@qq.com' }
-  s.source           = { :git => 'https://github.com/Alienchang/NELocation.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Alienchang/NELocation/tree/1.0.0', :tag => s.version.to_s }
 
   s.module_name = 'NELocation'
   s.requires_arc          = true
