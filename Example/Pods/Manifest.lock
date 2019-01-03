@@ -1,0 +1,19 @@
+PODS:
+  - MSWeakTimer (1.1.0)
+  - NELocation (1.0.0):
+    - MSWeakTimer
+
+DEPENDENCIES:
+  - NELocation (from `../`)
+
+EXTERNAL SOURCES:
+  NELocation:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
+  NELocation: fef057124f57281ab1c9130c008805b6c7d651c2
+
+PODFILE CHECKSUM: 97807e7a74ad69043f299f152a03381b12adf1a6
+
+COCOAPODS: 1.4.0

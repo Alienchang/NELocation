@@ -21,16 +21,16 @@ Pod::Spec.new do |s|
 定时获取，权限提示操作等等.
                        DESC
 
-  s.homepage         = 'https://github.com/Alienchang/NELocation.git'
+  s.homepage         = 'https://bitbucket.org/Mingde-Piao/nelocation.gi'
   s.license          = 'MIT'
   s.author           = { 'liuchang' => '1217493217@qq.com' }
-  s.source           = { :git => 'https://github.com/Alienchang/NELocation.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://bitbucket.org/Mingde-Piao/nelocation.git', :tag => s.version.to_s }
 
   s.module_name = 'NELocation'
   s.requires_arc          = true
   s.ios.deployment_target = '9.0'
-  s.source_files = 'Classes/**/*.{h,m,mm}'
-  s.public_header_files = 'Classes/**/*.h'
+  s.source_files = 'NELocation/Classes/*.{h,m,mm}'
+  s.public_header_files = 'NELocation/Classes/**/*.h'
   s.frameworks = 'CoreLocation'
   s.dependency 'MSWeakTimer'
 end

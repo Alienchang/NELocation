@@ -1,0 +1,936 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EEEC845758A0341C64096FFE6C9E198 /* MSWeakTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DF19CF220096978D769081BD0A7018 /* MSWeakTimer.framework */; };
+		0FF4055002D1FEFCA38E2A673088EFFF /* Pods-NELocation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E635DD9F6C119B3A7C88E35505F59B0 /* Pods-NELocation_Tests-dummy.m */; };
+		15C2957F9482756836494D1E8600C5EF /* NELocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B9265D776EE16C8DD9A3565C28D9F /* NELocationManager.m */; };
+		3EE8A17DACCC926C62CF0357617415D4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D808B6C59E07722D3EEF3A6F04A216 /* CoreLocation.framework */; };
+		4723EB868BC53D35477E8709AD5CF685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D89453DB4F89D18789B0506B4E66FC /* Foundation.framework */; };
+		49C71F39B4C851B15583F38868E9AE2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D89453DB4F89D18789B0506B4E66FC /* Foundation.framework */; };
+		501B5FB7B93D1410A71E5C26B302A55E /* MSWeakTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6150F5A144638714BA91A0FECB4D14A /* MSWeakTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		567398D69EF797FCF1EF2D1429602D6F /* NELocation.h in Headers */ = {isa = PBXBuildFile; fileRef = D0FEDE1595DA4FC0545C3FA2BE44CEB3 /* NELocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66F035D02179A1F78DE997045AE31524 /* NELocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FC4DE1E9DC04EF9B4D42AE9C053D471 /* NELocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		726C8E066BBE0F5602CF8D9A5B579BD6 /* Pods-NELocation_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 173640F98263E663E73207269D705F2C /* Pods-NELocation_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A158490896157FECDC6DCD5C4FC7A90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D89453DB4F89D18789B0506B4E66FC /* Foundation.framework */; };
+		823641DF7FF13AE4709C3AB5698AAA95 /* MSWeakTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5031936D76DE17D62EDAE85DE9E413 /* MSWeakTimer-dummy.m */; };
+		920141841C5638A1EDA154BB881FC86D /* NELocationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F48B0A00A81D109B0EEF767570BA6BA8 /* NELocationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		923638A16373AF4E701B9704B4705933 /* NELocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 249CCCEC05CB978BB3DF8F24FB5D4CA2 /* NELocation-dummy.m */; };
+		928D72ACE1A9D3969195C6C76C81481C /* NELocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 991ECED15BE6CCF528F7D1AA9CC3D31C /* NELocationInfo.m */; };
+		9B626CF3D33A928438C4D5C9DD725AD7 /* NELocation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E1AD66A11EA3D9ADFE567D84B636C7 /* NELocation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9EFB63E026D5647795587A1A43BF7F8 /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = DECD003FADBAF3544E297DB7ED31B600 /* MSWeakTimer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AFFEC4D509ED0950FF431626FA1DE9BC /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F75927904D7F696FC819B3F54DB16C9 /* MSWeakTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D118AB75DF954EB86E2FAF34D852BEBE /* Pods-NELocation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2CB92E93E132156A966F7663498A3F /* Pods-NELocation_Example-dummy.m */; };
+		DB83BFA9941F9B52B0832DBA57316F36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D89453DB4F89D18789B0506B4E66FC /* Foundation.framework */; };
+		E4BB9E72D59E408DE26438F006CC122F /* Pods-NELocation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9EA8571B2790439D05D678DD5D0A9FC /* Pods-NELocation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41AB239605F341D9D1E9D44384A93E0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08F595EE91C7EDC1F8B2C29C7FB85A0E;
+			remoteInfo = NELocation;
+		};
+		B2EBAB568AC3214F8B6F6CCD113D9406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA6E2C489C87B3328DF55E84521F17AD;
+			remoteInfo = MSWeakTimer;
+		};
+		FAC2942544B00CE0DB60C120D852DE9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA6E2C489C87B3328DF55E84521F17AD;
+			remoteInfo = MSWeakTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003C62D129E236E5F6C78D4017682267 /* Pods-NELocation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NELocation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		043A6F5A57FFAD07AE0C3032E6246293 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0930DC58ADE66664E25A468686A36329 /* Pods-NELocation_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NELocation_Example-frameworks.sh"; sourceTree = "<group>"; };
+		14FA7C00D9D3AE6045BB5FFE81D820BA /* Pods-NELocation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NELocation_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		173640F98263E663E73207269D705F2C /* Pods-NELocation_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NELocation_Example-umbrella.h"; sourceTree = "<group>"; };
+		1AD637A264EF1DAB752B1A68501ABF19 /* Pods_NELocation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NELocation_Tests.framework; path = "Pods-NELocation_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		249CCCEC05CB978BB3DF8F24FB5D4CA2 /* NELocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NELocation-dummy.m"; sourceTree = "<group>"; };
+		2557DA0B47E177F93385D4C25F445A89 /* Pods-NELocation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NELocation_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		2D2CB92E93E132156A966F7663498A3F /* Pods-NELocation_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NELocation_Example-dummy.m"; sourceTree = "<group>"; };
+		39927B1A885738B9DF64FE7BC9901B11 /* Pods-NELocation_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NELocation_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3D5031936D76DE17D62EDAE85DE9E413 /* MSWeakTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MSWeakTimer-dummy.m"; sourceTree = "<group>"; };
+		43E75CB6C68010B21C5B7EC86B69B828 /* Pods-NELocation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NELocation_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4E635DD9F6C119B3A7C88E35505F59B0 /* Pods-NELocation_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NELocation_Tests-dummy.m"; sourceTree = "<group>"; };
+		4EF8E7238795A36C202C5ACD9E911B96 /* Pods_NELocation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NELocation_Example.framework; path = "Pods-NELocation_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		535B9265D776EE16C8DD9A3565C28D9F /* NELocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NELocationManager.m; path = NELocation/Classes/NELocationManager.m; sourceTree = "<group>"; };
+		53EBFD628ABFC6B7F67A489DB873322B /* Pods-NELocation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NELocation_Tests.modulemap"; sourceTree = "<group>"; };
+		5BB10F42F68B6B16BEA21190B6F90767 /* Pods-NELocation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NELocation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		660562CA0C905A090B8F75EC7F935ED9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA9BF5DDB945A14ABFFC430EAD5DAE3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FC4DE1E9DC04EF9B4D42AE9C053D471 /* NELocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NELocationManager.h; path = NELocation/Classes/NELocationManager.h; sourceTree = "<group>"; };
+		7F1F5F58AC0843D1671E3016357633D6 /* Pods-NELocation_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NELocation_Tests-resources.sh"; sourceTree = "<group>"; };
+		8D007ECD2D6EEE1EDFE5BAF8A48931C1 /* Pods-NELocation_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NELocation_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		991ECED15BE6CCF528F7D1AA9CC3D31C /* NELocationInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NELocationInfo.m; path = NELocation/Classes/NELocationInfo.m; sourceTree = "<group>"; };
+		9F75927904D7F696FC819B3F54DB16C9 /* MSWeakTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
+		A944394D41EF17F83F301CF0B3796561 /* Pods-NELocation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NELocation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9EA8571B2790439D05D678DD5D0A9FC /* Pods-NELocation_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NELocation_Tests-umbrella.h"; sourceTree = "<group>"; };
+		AA47E6C24F0E424DC3EA950B15B9EDC2 /* NELocation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NELocation.xcconfig; sourceTree = "<group>"; };
+		AA985A26DB622E52F4D4856A76A23500 /* NELocation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = NELocation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC5E8C9FB02F6EA795FA5A6EC800730F /* MSWeakTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MSWeakTimer.modulemap; sourceTree = "<group>"; };
+		B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MSWeakTimer.xcconfig; sourceTree = "<group>"; };
+		B9D0EF9083DFF62E513E23D78A17DC7F /* NELocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NELocation.framework; path = NELocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C11812590474818DB364656BE051D25A /* Pods-NELocation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NELocation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C6150F5A144638714BA91A0FECB4D14A /* MSWeakTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSWeakTimer-umbrella.h"; sourceTree = "<group>"; };
+		CBF67C18F858C29A1D0000FADDFA975E /* MSWeakTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSWeakTimer-prefix.pch"; sourceTree = "<group>"; };
+		CC9D1D40E33F336E366323E8BEE0EA5E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D0FEDE1595DA4FC0545C3FA2BE44CEB3 /* NELocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NELocation.h; path = NELocation/Classes/NELocation.h; sourceTree = "<group>"; };
+		D3DA90F5807454DAE65898B292BCC69F /* Pods-NELocation_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NELocation_Example-resources.sh"; sourceTree = "<group>"; };
+		DB0DC9934E79303D3D878CE428ECBC3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		DECD003FADBAF3544E297DB7ED31B600 /* MSWeakTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSWeakTimer.m; sourceTree = "<group>"; };
+		E1DF19CF220096978D769081BD0A7018 /* MSWeakTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSWeakTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6BD5FF2225CCDF142E5CE53A864DB74 /* NELocation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NELocation.modulemap; sourceTree = "<group>"; };
+		EAF5CBEFA59EB3A9FED7666FA8E0DF06 /* Pods-NELocation_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NELocation_Example.modulemap"; sourceTree = "<group>"; };
+		F0D89453DB4F89D18789B0506B4E66FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F3E1AD66A11EA3D9ADFE567D84B636C7 /* NELocation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NELocation-umbrella.h"; sourceTree = "<group>"; };
+		F48B0A00A81D109B0EEF767570BA6BA8 /* NELocationInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NELocationInfo.h; path = NELocation/Classes/NELocationInfo.h; sourceTree = "<group>"; };
+		F5D808B6C59E07722D3EEF3A6F04A216 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		F7A1AD90A2B071FCF2669CD5033A0B2D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB7D6C972FAC45CB45F5E97613BC4ABC /* MSWeakTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MSWeakTimer.framework; path = MSWeakTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFD72A40293AC5D4B2C4E5D7740C6510 /* NELocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NELocation-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19D4C7256A18999B4C19841CEC8395EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4723EB868BC53D35477E8709AD5CF685 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6A686A9025B7256B9D18FA27B0807B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A158490896157FECDC6DCD5C4FC7A90 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55CCCA8ABB4AC26DEB7F43E05807A33A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB83BFA9941F9B52B0832DBA57316F36 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F9767D980DB3B27B2EF09E2189ED55B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE8A17DACCC926C62CF0357617415D4 /* CoreLocation.framework in Frameworks */,
+				49C71F39B4C851B15583F38868E9AE2B /* Foundation.framework in Frameworks */,
+				0EEEC845758A0341C64096FFE6C9E198 /* MSWeakTimer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		302E2667A3BFBEFD348B5FD981D81E57 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DB0DC9934E79303D3D878CE428ECBC3B /* LICENSE */,
+				AA985A26DB622E52F4D4856A76A23500 /* NELocation.podspec */,
+				CC9D1D40E33F336E366323E8BEE0EA5E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		3F1EB7D6E91F13E94660C0F544BFEE6E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				96D6A1B517084462E64BCA36780D4BB1 /* Pods-NELocation_Example */,
+				BF8ECF51B94931F41C70D5F8B21192B0 /* Pods-NELocation_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6068CCA9F9B7A528531715C330BCB373 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F729AA329A2853EC4EBF570EBF26D9E6 /* MSWeakTimer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6DBC41D055CC6B82C40E3B2678778016 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1DF19CF220096978D769081BD0A7018 /* MSWeakTimer.framework */,
+				BF68579C11CE0DA4538940E1036BB059 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				E90235BE7D72C5ACA5A345AFE0E114BF /* Development Pods */,
+				6DBC41D055CC6B82C40E3B2678778016 /* Frameworks */,
+				6068CCA9F9B7A528531715C330BCB373 /* Pods */,
+				9384439285EC64C3BA7888E3AE9A050F /* Products */,
+				3F1EB7D6E91F13E94660C0F544BFEE6E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9384439285EC64C3BA7888E3AE9A050F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB7D6C972FAC45CB45F5E97613BC4ABC /* MSWeakTimer.framework */,
+				B9D0EF9083DFF62E513E23D78A17DC7F /* NELocation.framework */,
+				4EF8E7238795A36C202C5ACD9E911B96 /* Pods_NELocation_Example.framework */,
+				1AD637A264EF1DAB752B1A68501ABF19 /* Pods_NELocation_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96D6A1B517084462E64BCA36780D4BB1 /* Pods-NELocation_Example */ = {
+			isa = PBXGroup;
+			children = (
+				043A6F5A57FFAD07AE0C3032E6246293 /* Info.plist */,
+				EAF5CBEFA59EB3A9FED7666FA8E0DF06 /* Pods-NELocation_Example.modulemap */,
+				39927B1A885738B9DF64FE7BC9901B11 /* Pods-NELocation_Example-acknowledgements.markdown */,
+				C11812590474818DB364656BE051D25A /* Pods-NELocation_Example-acknowledgements.plist */,
+				2D2CB92E93E132156A966F7663498A3F /* Pods-NELocation_Example-dummy.m */,
+				0930DC58ADE66664E25A468686A36329 /* Pods-NELocation_Example-frameworks.sh */,
+				D3DA90F5807454DAE65898B292BCC69F /* Pods-NELocation_Example-resources.sh */,
+				173640F98263E663E73207269D705F2C /* Pods-NELocation_Example-umbrella.h */,
+				14FA7C00D9D3AE6045BB5FFE81D820BA /* Pods-NELocation_Example.debug.xcconfig */,
+				5BB10F42F68B6B16BEA21190B6F90767 /* Pods-NELocation_Example.release.xcconfig */,
+			);
+			name = "Pods-NELocation_Example";
+			path = "Target Support Files/Pods-NELocation_Example";
+			sourceTree = "<group>";
+		};
+		9EC31B1821A6F6A60D4880976C23CEF1 /* NELocation */ = {
+			isa = PBXGroup;
+			children = (
+				D0FEDE1595DA4FC0545C3FA2BE44CEB3 /* NELocation.h */,
+				F48B0A00A81D109B0EEF767570BA6BA8 /* NELocationInfo.h */,
+				991ECED15BE6CCF528F7D1AA9CC3D31C /* NELocationInfo.m */,
+				6FC4DE1E9DC04EF9B4D42AE9C053D471 /* NELocationManager.h */,
+				535B9265D776EE16C8DD9A3565C28D9F /* NELocationManager.m */,
+				302E2667A3BFBEFD348B5FD981D81E57 /* Pod */,
+				C7E26D32CC6C1145E083C7F1C4509409 /* Support Files */,
+			);
+			name = NELocation;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BF68579C11CE0DA4538940E1036BB059 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F5D808B6C59E07722D3EEF3A6F04A216 /* CoreLocation.framework */,
+				F0D89453DB4F89D18789B0506B4E66FC /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BF8ECF51B94931F41C70D5F8B21192B0 /* Pods-NELocation_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6FA9BF5DDB945A14ABFFC430EAD5DAE3 /* Info.plist */,
+				53EBFD628ABFC6B7F67A489DB873322B /* Pods-NELocation_Tests.modulemap */,
+				003C62D129E236E5F6C78D4017682267 /* Pods-NELocation_Tests-acknowledgements.markdown */,
+				8D007ECD2D6EEE1EDFE5BAF8A48931C1 /* Pods-NELocation_Tests-acknowledgements.plist */,
+				4E635DD9F6C119B3A7C88E35505F59B0 /* Pods-NELocation_Tests-dummy.m */,
+				2557DA0B47E177F93385D4C25F445A89 /* Pods-NELocation_Tests-frameworks.sh */,
+				7F1F5F58AC0843D1671E3016357633D6 /* Pods-NELocation_Tests-resources.sh */,
+				A9EA8571B2790439D05D678DD5D0A9FC /* Pods-NELocation_Tests-umbrella.h */,
+				A944394D41EF17F83F301CF0B3796561 /* Pods-NELocation_Tests.debug.xcconfig */,
+				43E75CB6C68010B21C5B7EC86B69B828 /* Pods-NELocation_Tests.release.xcconfig */,
+			);
+			name = "Pods-NELocation_Tests";
+			path = "Target Support Files/Pods-NELocation_Tests";
+			sourceTree = "<group>";
+		};
+		C7E26D32CC6C1145E083C7F1C4509409 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7A1AD90A2B071FCF2669CD5033A0B2D /* Info.plist */,
+				E6BD5FF2225CCDF142E5CE53A864DB74 /* NELocation.modulemap */,
+				AA47E6C24F0E424DC3EA950B15B9EDC2 /* NELocation.xcconfig */,
+				249CCCEC05CB978BB3DF8F24FB5D4CA2 /* NELocation-dummy.m */,
+				FFD72A40293AC5D4B2C4E5D7740C6510 /* NELocation-prefix.pch */,
+				F3E1AD66A11EA3D9ADFE567D84B636C7 /* NELocation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NELocation";
+			sourceTree = "<group>";
+		};
+		E54BBBA4F86B53BAC97715858840345A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				660562CA0C905A090B8F75EC7F935ED9 /* Info.plist */,
+				AC5E8C9FB02F6EA795FA5A6EC800730F /* MSWeakTimer.modulemap */,
+				B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */,
+				3D5031936D76DE17D62EDAE85DE9E413 /* MSWeakTimer-dummy.m */,
+				CBF67C18F858C29A1D0000FADDFA975E /* MSWeakTimer-prefix.pch */,
+				C6150F5A144638714BA91A0FECB4D14A /* MSWeakTimer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MSWeakTimer";
+			sourceTree = "<group>";
+		};
+		E90235BE7D72C5ACA5A345AFE0E114BF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EC31B1821A6F6A60D4880976C23CEF1 /* NELocation */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F729AA329A2853EC4EBF570EBF26D9E6 /* MSWeakTimer */ = {
+			isa = PBXGroup;
+			children = (
+				9F75927904D7F696FC819B3F54DB16C9 /* MSWeakTimer.h */,
+				DECD003FADBAF3544E297DB7ED31B600 /* MSWeakTimer.m */,
+				E54BBBA4F86B53BAC97715858840345A /* Support Files */,
+			);
+			name = MSWeakTimer;
+			path = MSWeakTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4B9BB111D8DA4089D6EA01FB73D1CB92 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4BB9E72D59E408DE26438F006CC122F /* Pods-NELocation_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68654C6078B0AC01AC99EBE8498CA1A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501B5FB7B93D1410A71E5C26B302A55E /* MSWeakTimer-umbrella.h in Headers */,
+				AFFEC4D509ED0950FF431626FA1DE9BC /* MSWeakTimer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD9848C3024983715236C3E5407BA89D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				726C8E066BBE0F5602CF8D9A5B579BD6 /* Pods-NELocation_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF9DAD7BA7A0D9FF528B53A483CCE11E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B626CF3D33A928438C4D5C9DD725AD7 /* NELocation-umbrella.h in Headers */,
+				567398D69EF797FCF1EF2D1429602D6F /* NELocation.h in Headers */,
+				920141841C5638A1EDA154BB881FC86D /* NELocationInfo.h in Headers */,
+				66F035D02179A1F78DE997045AE31524 /* NELocationManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		08F595EE91C7EDC1F8B2C29C7FB85A0E /* NELocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D451D70B82AE409EB4C5B8E38B0720C6 /* Build configuration list for PBXNativeTarget "NELocation" */;
+			buildPhases = (
+				D7800AF0817890E06BDF6C0AA2DB7931 /* Sources */,
+				5F9767D980DB3B27B2EF09E2189ED55B /* Frameworks */,
+				CF9DAD7BA7A0D9FF528B53A483CCE11E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AC92E2AECDC2E821ACEC8A3DD56A8D7 /* PBXTargetDependency */,
+			);
+			name = NELocation;
+			productName = NELocation;
+			productReference = B9D0EF9083DFF62E513E23D78A17DC7F /* NELocation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		224915161A9F21D1944793EB8F7A9D92 /* Pods-NELocation_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33B5EBB4850EA7D1EF37DC393D7FFB9E /* Build configuration list for PBXNativeTarget "Pods-NELocation_Tests" */;
+			buildPhases = (
+				46F4B74A86C293A6C3618372A4C8C874 /* Sources */,
+				55CCCA8ABB4AC26DEB7F43E05807A33A /* Frameworks */,
+				4B9BB111D8DA4089D6EA01FB73D1CB92 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NELocation_Tests";
+			productName = "Pods-NELocation_Tests";
+			productReference = 1AD637A264EF1DAB752B1A68501ABF19 /* Pods_NELocation_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7666B6EB86E9742443A72F8D4E7C6DAF /* Pods-NELocation_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD19400A4B989A6AB32E1BC96092747D /* Build configuration list for PBXNativeTarget "Pods-NELocation_Example" */;
+			buildPhases = (
+				7C0681786A6DA832615E538A14054CD5 /* Sources */,
+				19D4C7256A18999B4C19841CEC8395EC /* Frameworks */,
+				BD9848C3024983715236C3E5407BA89D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F9CBDBEA67E825E3918491DF8442E72 /* PBXTargetDependency */,
+				26CAA8A46EA76F75C82AAD2638561E8E /* PBXTargetDependency */,
+			);
+			name = "Pods-NELocation_Example";
+			productName = "Pods-NELocation_Example";
+			productReference = 4EF8E7238795A36C202C5ACD9E911B96 /* Pods_NELocation_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1359C7B6D92ABF2D3F636AEB294EF4B /* Build configuration list for PBXNativeTarget "MSWeakTimer" */;
+			buildPhases = (
+				95C1FFBD4F169BF7C6E74536F6D8FAC0 /* Sources */,
+				3D6A686A9025B7256B9D18FA27B0807B /* Frameworks */,
+				68654C6078B0AC01AC99EBE8498CA1A8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MSWeakTimer;
+			productName = MSWeakTimer;
+			productReference = FB7D6C972FAC45CB45F5E97613BC4ABC /* MSWeakTimer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9384439285EC64C3BA7888E3AE9A050F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */,
+				08F595EE91C7EDC1F8B2C29C7FB85A0E /* NELocation */,
+				7666B6EB86E9742443A72F8D4E7C6DAF /* Pods-NELocation_Example */,
+				224915161A9F21D1944793EB8F7A9D92 /* Pods-NELocation_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46F4B74A86C293A6C3618372A4C8C874 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF4055002D1FEFCA38E2A673088EFFF /* Pods-NELocation_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C0681786A6DA832615E538A14054CD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D118AB75DF954EB86E2FAF34D852BEBE /* Pods-NELocation_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C1FFBD4F169BF7C6E74536F6D8FAC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823641DF7FF13AE4709C3AB5698AAA95 /* MSWeakTimer-dummy.m in Sources */,
+				A9EFB63E026D5647795587A1A43BF7F8 /* MSWeakTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7800AF0817890E06BDF6C0AA2DB7931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				923638A16373AF4E701B9704B4705933 /* NELocation-dummy.m in Sources */,
+				928D72ACE1A9D3969195C6C76C81481C /* NELocationInfo.m in Sources */,
+				15C2957F9482756836494D1E8600C5EF /* NELocationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26CAA8A46EA76F75C82AAD2638561E8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NELocation;
+			target = 08F595EE91C7EDC1F8B2C29C7FB85A0E /* NELocation */;
+			targetProxy = 41AB239605F341D9D1E9D44384A93E0E /* PBXContainerItemProxy */;
+		};
+		6AC92E2AECDC2E821ACEC8A3DD56A8D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MSWeakTimer;
+			target = AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */;
+			targetProxy = FAC2942544B00CE0DB60C120D852DE9C /* PBXContainerItemProxy */;
+		};
+		7F9CBDBEA67E825E3918491DF8442E72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MSWeakTimer;
+			target = AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */;
+			targetProxy = B2EBAB568AC3214F8B6F6CCD113D9406 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2AADB4D90F78A6FEE96DA1348BBC353A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BB10F42F68B6B16BEA21190B6F90767 /* Pods-NELocation_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NELocation_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NELocation_Example/Pods-NELocation_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NELocation_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7C97FA8FB332B836933A002B92473047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MSWeakTimer/MSWeakTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MSWeakTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MSWeakTimer/MSWeakTimer.modulemap";
+				PRODUCT_NAME = MSWeakTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		827269710C98D60C14D46BC6AF9BF728 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8B62714EA8FA0A580E3160E9910CCE6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA47E6C24F0E424DC3EA950B15B9EDC2 /* NELocation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NELocation/NELocation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NELocation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NELocation/NELocation.modulemap";
+				PRODUCT_NAME = NELocation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8EAB0BAFF1E863E67EBC27F1DB928D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A944394D41EF17F83F301CF0B3796561 /* Pods-NELocation_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NELocation_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NELocation_Tests/Pods-NELocation_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NELocation_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A54BBF3C4CE38D7E51D5090D5018ED94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FA7C00D9D3AE6045BB5FFE81D820BA /* Pods-NELocation_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NELocation_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NELocation_Example/Pods-NELocation_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NELocation_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A7739DA352B29A38D9AD3B4EE1BD9D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MSWeakTimer/MSWeakTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MSWeakTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MSWeakTimer/MSWeakTimer.modulemap";
+				PRODUCT_NAME = MSWeakTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BD2A4024A903BEF7E1E98A9BB97C3AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA47E6C24F0E424DC3EA950B15B9EDC2 /* NELocation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NELocation/NELocation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NELocation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NELocation/NELocation.modulemap";
+				PRODUCT_NAME = NELocation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E13F811A1BC4DCC7712E337B5C61B47D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E75CB6C68010B21C5B7EC86B69B828 /* Pods-NELocation_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NELocation_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NELocation_Tests/Pods-NELocation_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NELocation_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */,
+				827269710C98D60C14D46BC6AF9BF728 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33B5EBB4850EA7D1EF37DC393D7FFB9E /* Build configuration list for PBXNativeTarget "Pods-NELocation_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EAB0BAFF1E863E67EBC27F1DB928D9B /* Debug */,
+				E13F811A1BC4DCC7712E337B5C61B47D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD19400A4B989A6AB32E1BC96092747D /* Build configuration list for PBXNativeTarget "Pods-NELocation_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54BBF3C4CE38D7E51D5090D5018ED94 /* Debug */,
+				2AADB4D90F78A6FEE96DA1348BBC353A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D451D70B82AE409EB4C5B8E38B0720C6 /* Build configuration list for PBXNativeTarget "NELocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B62714EA8FA0A580E3160E9910CCE6D /* Debug */,
+				BD2A4024A903BEF7E1E98A9BB97C3AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1359C7B6D92ABF2D3F636AEB294EF4B /* Build configuration list for PBXNativeTarget "MSWeakTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C97FA8FB332B836933A002B92473047 /* Debug */,
+				A7739DA352B29A38D9AD3B4EE1BD9D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

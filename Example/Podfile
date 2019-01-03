@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NELocation_Example' do
+  pod 'NELocation', :path => '../'
+
+  target 'NELocation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

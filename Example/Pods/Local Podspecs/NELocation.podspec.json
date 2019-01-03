@@ -1,0 +1,28 @@
+{
+  "name": "NELocation",
+  "version": "1.0.0",
+  "summary": "获取地理位置信息.",
+  "description": "定时获取，权限提示操作等等.",
+  "homepage": "https://bitbucket.org/Mingde-Piao/nelocation.gi",
+  "license": "MIT",
+  "authors": {
+    "liuchang": "1217493217@qq.com"
+  },
+  "source": {
+    "git": "https://bitbucket.org/Mingde-Piao/nelocation.git",
+    "tag": "1.0.0"
+  },
+  "module_name": "NELocation",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "NELocation/Classes/*.{h,m,mm}",
+  "public_header_files": "NELocation/Classes/**/*.h",
+  "frameworks": "CoreLocation",
+  "dependencies": {
+    "MSWeakTimer": [
+
+    ]
+  }
+}

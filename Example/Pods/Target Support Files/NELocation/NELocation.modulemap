@@ -1,0 +1,6 @@
+framework module NELocation {
+  umbrella header "NELocation-umbrella.h"
+
+  export *
+  module * { export * }
+}
